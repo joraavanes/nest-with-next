@@ -1,7 +1,5 @@
-import { NestFactory } from '@nestjs/core';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import ApiService from '../../server/modules/api/api.service';
 
 const Products = ({ items }) => {
 
@@ -26,8 +24,6 @@ const Products = ({ items }) => {
 };
 
 export async function getStaticProps() {
-  // const apiService = await NestFactory.create(ApiService);
-  // const items = apiService.
 
   try {
     const res = await fetch('http://localhost:3000/api/items');
